@@ -23,6 +23,9 @@ mongoose.connect('mongodb+srv://mrwhoisamit:vDkLlQEa6Gtft0ai@cluster0.jlrtl.mong
 // API Routes
 
 // Create a new paste
+app.get("/", function (req, res) {
+    res.send("hello world")
+})
 app.post('/api/paste', async (req, res) => {
     const { content } = req.body;
 
