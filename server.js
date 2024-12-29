@@ -26,7 +26,7 @@ mongoose.connect('mongodb+srv://mrwhoisamit:vDkLlQEa6Gtft0ai@cluster0.jlrtl.mong
 app.get("/", function (req, res) {
     res.send("hello world")
 })
-app.post('/api/paste', async (req, res) => {
+app.post('/paste', async (req, res) => {
     const { content } = req.body;
 
     if (!content) {
@@ -45,7 +45,7 @@ app.post('/api/paste', async (req, res) => {
 });
 
 // Retrieve a paste by short URL
-app.get('/api/paste/:shortUrl', async (req, res) => {
+app.get('/paste/:shortUrl', async (req, res) => {
     const { shortUrl } = req.params;
 
     try {
